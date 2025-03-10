@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>student validation</title>
+</head>
+<body>
+    <form onsubmit="submit()">
+        Name : <input type="text" name="" id="name" value="" onblur="checkUsername()"><br>
+        Age : <input type="text" id="age" onblur="checkAge()"><br>
+        Email : <input type="text" name="" id="email" onblur="checkEmail()"><br>
+        password : <input type="password" name="" id="password" onblur="checkPassword()"><br>
+        re-password : <input type="password" name="" id="checkPassword" onblur="checkRePassword()"><br>
+        <input type="submit" value="submit">
+    </form>
+    <script>
+        function submit() {
+
+        }
+
+        function checkUsername() {
+            let username = document.getElementById('name')
+            if (username.value.length === 0 || username.value.length > 12) {
+                username.style.border = '2px solid red'
+            }else {
+                username.style.border = '2px solid blue'
+            }
+        }
+        function checkAge() {
+            let age = document.getElementById('age')
+            if(age.value < 18) {
+                age.style.border = '2px solid red'
+            }else {
+                age.style.border = '2px solid blue'
+            }
+        }
+        function checkEmail() {
+            let email = document.getElementById('email')
+            let pattern = "^[\\w-_\.]*[\\w-_\.]\@[\\w]\.+[\\w]+[\\w]$"
+            check = new RegExp(pattern)
+            if (check.test(email.value)) {
+                email.style.border = '2px solid blue'
+            }else {
+                email.style.border = '2px solid red'
+            }
+        }
+        function checkPassword() {
+            let password = document.getElementById('password')
+            console.log(password)
+            if (true) {
+                password.style.border = '2px solid red'
+            }else {
+                let pattern = '[0-9]{1}[a-z]{1}[A-Z]{1}[!@#$%^&*()))))_+=-]{1}'
+                check = new RegExp(pattern)
+                if (check.test(password.value)){
+                    password.style.border = '2px solid blue'
+                }else {
+                    password.style.border = '2px solid red'
+                }
+            }
+        }
+        function checkRePassword() {
+            let password = document.getElementById('password')
+            let rePassword = document.getElementById('checkPassword')
+            if (password.value === rePassword.value) {
+                rePassword.style.border = '2px solid blue'
+            }else {
+                rePassword.style.border = '2px solid red'
+            }
+        }
+    </script>
+</body>
+</html>

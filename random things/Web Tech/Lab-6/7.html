@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    create : <input type="text" id="create" > <button id="created">create</button><br>
+    <button id="readed">read</button><br>
+    update : <input type="text" id="update" > old value : <input type="text" id="oldUpdate" > <button id="updated">update</button><br>
+    delete :<input type="text" id="delete" ><button id="deleted">delete</button><br>
+<script>
+    let arr = []
+
+    let create = document.getElementById('created')
+    let read = document.getElementById('readed')
+    let update = document.getElementById('updated')
+    let Delete = document.getElementById('deleted')
+
+    create.addEventListener('click',()=>{
+        let valcreate = document.getElementById('create').value
+        arr.push(valcreate)
+        console.log("created")
+    })
+
+    read.addEventListener('click',()=>{
+        console.log(arr)
+        console.log("readed")
+    })
+    update.addEventListener('click',()=>{
+        let valUpdate = document.getElementById('update').value
+        let oldValUpdate = document.getElementById('oldUpdate').value
+        for (let i = 0; i < arr.length;i++) {
+            if (arr[i] === oldValUpdate) {
+                arr[i] = valUpdate
+            }
+        }
+        console.log("updated")
+    })
+    Delete.addEventListener('click',()=>{
+        let valDelete = document.getElementById('delete').value
+        for (let i = 0; i < arr.length;i++) {
+            if (arr[i] === valDelete) {
+                arr.splice(i,1)
+            }
+        }
+        console.log("deleted")
+    })
+</script>
+</body>
+</html>

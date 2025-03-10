@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime bet 2 num</title>
+</head>
+<body>
+    <script>
+        let s,e ,count=0, i, v, b;
+        s = prompt("enter start")
+        v = Number.parseInt(s)
+        
+        e = prompt("enter End")
+        b = Number.parseInt(e)
+        for (let i = v; i <= b; i++) {
+            let flag  = 0
+            for (let j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    flag  = 1;
+                }
+            }
+            if(i > 1 && flag == 0){
+                document.write(i)
+            }
+        }
+        
+    </script>
+</body>
+</html>

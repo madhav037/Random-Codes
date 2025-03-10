@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="searchText" onkeyup="displayFaculty()">
+    <script>
+        a = ['madhav', 'nishith', 'meet', 'parth', 'tushar']
+        function addFaculty() {
+            var st = document.getElementById('searchText').value
+            a.unshift(st)
+            document.getElementById('searchText').value = ""
+            displayFaculty();
+            var newA = filteredA.map((fac)=> {
+                return "<tr><td>"+fac+"</td><tr><button onclick='deleteFaculty()'>"
+            })
+
+            document.getElementById('ans').innerHTML = newA.join(" ")
+        }
+        displayFaculty();
+        function deleteFaculty(fac) {
+            let index = a.find(f)
+            a.splice(index,i)
+        }
+    </script>
+</body>
+</html>

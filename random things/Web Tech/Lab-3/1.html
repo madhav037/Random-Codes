@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array max num</title>
+</head>
+<body>
+    <script>
+        let n = Number.parseInt(prompt("enter num"))
+        let arr = []
+        for (let i = 0; i < n; i++) {
+            let num = Number.parseInt(prompt("enter num : "))
+            arr.push(num)
+        }
+
+        let max = arr[0]
+        for (let i = 0; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i]
+            }
+        }
+
+        document.write(max)
+    </script>
+</body>
+</html>

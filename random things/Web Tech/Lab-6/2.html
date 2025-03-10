@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse over</title>
+    <style>
+        #inputbox {
+            height: 500px;
+            width: 500px;
+            background-color: red;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="inputbox" onclick="events(event)" ondblclick="events(event)" onmouseover="events(event)" onmousedown="events(event)" onmouseout="events(event)" onmouseup="events(event)"></div>
+    <div id="input">hello</div>
+    <script>
+        function events(e) {
+            let msg = ''
+            isEvent = e.type
+
+            switch(isEvent) {
+                case 'click' : msg = 'mouse clicked'
+                    break;
+                case 'dblclick' : msg = 'mouse double clicked'
+                    break;
+                case 'mousedown' : msg = 'mouse pressed'
+                    break;
+                case 'mousemove' : msg = 'mouse moved'
+                    break;
+                case 'mouseover' : msg = 'mouse over'
+                    break;
+                case 'mouseout' : msg = 'mouse is out'
+                    break;
+                case 'mouseup' : msg = 'mouse released'
+                    break;
+                default : msg = 'invalid!'
+            }
+
+            document.getElementById('input').innerHTML = msg
+        }
+    </script>
+</body>
+</html>

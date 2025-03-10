@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="click" id="check">
+<div id="type"></div>
+<script>
+    document.getElementById('check').addEventListener('mouseup', (e) => {
+        if (e.button === 2) {
+            document.getElementById('type').innerHTML = "right click"
+        }else if (e.button === 0) {
+            document.getElementById('type').innerHTML = "left click"
+        }
+    })
+</script>
+</body>
+</html>

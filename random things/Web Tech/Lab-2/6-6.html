@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = Number.parseInt(prompt("enter num "))
+        if(n < 0 || n > 999) {
+            document.write("out of range")
+        }
+        else if (isNaN(n) === true) {
+            document.write('not a number')
+        }
+        else {
+            let num = n, count = 0, check = 1
+            let digit = []
+            while (n > 0) {
+                digit[count] = n % 10
+                count++
+                n = Number.parseInt(n/10)
+            }
+            let once = ['zero','one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight','nine']
+            let elevens = ['ten','eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen','ninteen']
+            let tens = ['ten','twenty', 'thirty', 'fourty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninty']
+            
+
+        }
+    </script>
+</body>
+</html>

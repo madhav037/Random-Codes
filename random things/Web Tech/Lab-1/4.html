@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>faibonaci</title>
+</head>
+<body>
+    <script>
+        let a = prompt('Enter a')
+        a = Number.parseInt(a)
+        let ans = 1
+        document.write("0")
+        document.write("1")
+        let last = 0
+        let Slast = 1
+        for (let i = 2; i < a; i++) {
+             ans = last + Slast
+             last = Slast
+             Slast = ans
+             document.write(ans + " ")
+// 011235
+        }
+    </script>
+</body>
+</html>

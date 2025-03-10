@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse over</title>
+    <style>
+        #inputbox {
+            height: 500px;
+            width: 500px;
+            background-color: red;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="events(event)">
+        <input type="text" onblur="events(event)">
+        <input type="text" onfocus="events(event)">
+        <input type="checkbox" onchange="events(event)">
+        <textarea cols="30" rows="10" onselect="events(event)">hellloo therere   ha heh he he ehe</textarea>
+        <input type="submit" value="submit">
+        <input type="reset" value="reset" onreset="events(event)">
+        <div id="input"></div>
+        <input type="button" value="buton" id="btn1">
+
+    </form>
+    <script>
+         var btn = document.getElementById('btn1')
+        btn.addEventListener('click', () => {
+                document.body.style.backgroundColor = 'red;'
+            }) 
+        // let msg=''
+        // function events(e) {
+
+            
+
+            
+        //     isEvent = e.type
+        //     console.log(e)
+
+        //     switch(isEvent) {
+        //         case 'focus' : msg += 'focus'
+        //             break;
+        //         case 'blur' : msg += 'blur'
+        //             break;
+        //         case 'change' : msg = 'change'
+        //             break;
+        //         case 'select' : msg = 'select'
+        //             break;
+        //         case 'submit' : msg = alert('submitted')
+        //             break;
+        //         case 'reset' : alert('reseted')
+        //             break;
+        //         default : msg = 'invalid!'
+        //             break;
+        //     }
+
+        //     document.getElementById('input').innerHTML = msg
+            
+        // }
+    </script>
+</body>
+</html>

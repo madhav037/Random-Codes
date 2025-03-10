@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 digit seperate power</title>
+</head>
+<body>
+    <script>
+        let num = Number.parseInt(prompt("enter num "))
+        let power = num % 10
+        let base = Number.parseInt(num/10)
+        let ans = 1
+        for (i = 1; i <= power; i++) {
+            ans *= base
+        }
+
+        document.write(ans)
+    </script>
+</body>
+</html>

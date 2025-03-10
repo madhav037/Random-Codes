@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse over</title>
+    <style>
+        #inputbox {
+            height: 500px;
+            width: 500px;
+            background-color: red;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body onkeydown="events(event)" onkeypress="events(event)" onkeyup="events(event)">
+    <div id="input">hello</div>
+    <script>
+        function events(e) {
+            let msg = ''
+            isEvent = e.type
+
+            switch(isEvent) {
+                case 'keydown' : msg = 'key down'
+                    break;
+                case 'keyup' : msg = 'key up'
+                    break;
+                case 'keypress' : msg = 'key pressed'
+                    break;
+                default : msg = 'invalid!'
+                    break;
+            }
+
+            document.getElementById('input').innerHTML = msg
+        }
+    </script>
+</body>
+</html>

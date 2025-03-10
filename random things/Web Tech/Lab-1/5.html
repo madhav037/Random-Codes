@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrome</title>
+</head>
+<body>
+    <script>
+        let a = prompt('enter a ')
+        let c = Number.parseInt(a)
+        let b = c
+        let rem = 0
+        let digit = 0
+        while(c > 0) {
+            rem = c % 10
+            digit = digit*10 + rem
+            c = Number.parseInt(c/10)   
+        }
+        // console.log(digit);
+        if (b === digit) {
+            document.write("yes");
+        }
+        else {
+            document.write("no");
+        }
+
+    </script>
+</body>
+</html>

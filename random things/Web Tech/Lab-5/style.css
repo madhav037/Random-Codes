@@ -1,0 +1,144 @@
+body{
+  background-color: rgb(15,15,15);
+  margin: none;
+}
+.main{
+  transform: translate('-50%','-50%');
+}
+
+#output-box{
+  width: 25%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  height: 2.5em;
+  padding-right: 1em;
+}
+#output-box input{
+  width: 100%;
+  text-align: right;
+  border: none;
+  background-color: rgb(25,25,25);
+  border-radius: 15px;
+  color: white;
+  height: 2.5em;
+  padding-right: 1em;
+  font-size: medium;
+}
+
+#number-box{
+  background-color: rgb(35,35,35);
+  border-radius: 15px;
+  width: 25%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 12px;
+}
+
+#clr, #CE, #modulo, #divide, #one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #zero, #dot, #add, #sub, #multi, #equals, #plus-minus{
+  background-color: rgb(50,50,50);
+  height: 75px;
+  width: 75px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+}
+#clr:hover, #CE:hover{
+  background-color: darkred;
+}
+#modulo:hover, #divide:hover, #multi:hover, #sub:hover, #add:hover{
+  background-color: rgb(60,60,60);
+}
+#one:hover, #two:hover, #three:hover, #four:hover, #five:hover, #six:hover, #seven:hover, #eight:hover, #nine:hover, #plus-minus:hover, #dot:hover, #zero:hover{
+  background-color: rgb(50,50,50);
+}
+#one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #plus-minus, #zero, #dot{
+  background-color: rgb(60,60,60);
+}
+#equals:hover{
+  background-color: green;
+}
+
+@media only screen and (max-width: 400px){
+  #output-box{
+    width: 320px;
+  }
+
+  #number-box{
+    width: 320px;
+  }
+
+  #clr, #CE, #modulo, #divide, #one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #zero, #dot, #add, #sub, #multi, #equals, #plus-minus{
+    background-color: rgb(50,50,50);
+    height: 60px;
+    width: 60px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+  }
+  #one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #plus-minus, #zero, #dot{
+    background-color: rgb(60,60,60);
+  }
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) and (min-width: 400px) {
+  #output-box{
+    width: 380px;
+  }
+
+  #number-box{
+    width: 380px;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px){
+    #output-box{
+      width: 400px;
+    }
+
+    #number-box{
+      width: 400px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #output-box{
+    width: 400px;
+  }
+
+  #number-box{
+    width: 400px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  #output-box{
+    width: 400px;
+  }
+
+  #number-box{
+    width: 400px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #output-box{
+    width: 400px;
+  }
+
+  #number-box{
+    width: 400px;
+  } 
+}

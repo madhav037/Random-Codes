@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sort accenting order</title>
+</head>
+<body>
+    <script>
+        let arr = []
+        let n = parseInt(prompt("enter length of array :"))
+        for (let i = 0; i < n; i++) {
+            let num = parseInt(prompt("enter " + i + "th element :"))
+            arr.push(num);
+        }
+        let min = arr[0]
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j < n; j++) {
+                if (arr[i] < arr[j]) {
+                    let temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        console.log(arr)
+
+    </script>
+</body>
+</html>

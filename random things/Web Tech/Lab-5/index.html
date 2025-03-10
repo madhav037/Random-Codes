@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+<!--  <script src="./script.js"></script>-->
+  <script src="sc2.js"></script>
+  <title>Home</title>
+</head>
+<body>
+  <div class="main">
+    <form>
+      <div id="output-box">
+        <label for="answer"></label>
+          <input type="text" id="answer" name="answerPannel"/>
+      </div>
+      <div id="number-box">
+        <div>
+          <input type="button" value="AC" id="clr" onclick="answerPannel.value = '' ">
+          <input type="button" value="C" id="CE" onclick="answerPannel.value = answerPannel.value.toString().slice(0,-1) ">
+          <input type="button" value="%" id="modulo" onclick="answerPannel.value += '*0.01' ">
+          <input type="button" value="/" id="divide" onclick="answerPannel.value += '/' ">
+        </div>
+        <div>
+          <input type="button" value="7" id="seven" class="number" onclick="answerPannel.value += '7'">
+          <input type="button" value="8" id="eight" class="number" onclick="answerPannel.value += '8'">
+          <input type="button" value="9" id="nine" onclick="answerPannel.value += '9'">
+          <input type="button" value="*" id="multi" onclick="answerPannel.value += '*' ">
+        </div>
+        <div>
+          <input type="button" value="4" id="four" onclick="answerPannel.value += '4'">
+          <input type="button" value="5" id="five" onclick="answerPannel.value += '5'">
+          <input type="button" value="6" id="six" onclick="answerPannel.value += '6'">
+          <input type="button" value="-" id="sub" onclick="answerPannel.value += '-' ">
+        </div>
+        <div>
+          <input type="button" value="1" id="one" onclick="answerPannel.value += '1'">
+          <input type="button" value="2" id="two" onclick="answerPannel.value += '2'">
+          <input type="button" value="3" id="three" onclick="answerPannel.value += '3'">
+          <input type="button" value="+" id="add" onclick="answerPannel.value += '+' ">
+        </div>
+        <div>
+          <input type="button" value="00" id="plus-minus" onclick="answerPannel.value += '00'">
+          <input type="button" value="0" id="zero" onclick="answerPannel.value += '0'">
+          <input type="button" value="." id="dot" onclick="answerPannel.value += '.'">
+          <input type="button" value="=" id="equals" onclick="answerPannel.value = calc()">
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

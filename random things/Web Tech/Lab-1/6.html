@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>armstrong</title>
+</head>
+<body>
+    <script>
+        let n, x, i, rem=0, digit=0, num;
+        n = prompt('Enter Number : ')
+        num = Number.parseInt(n)
+        x=num;
+        while(num > 0){
+            rem = num % 10
+            let remCube = rem * rem * rem
+            digit = digit + remCube
+            num = Number.parseInt(num/10)
+        }
+        if(digit == x){
+            document.write("armstrong num");
+        }
+        else{
+            document.write("not armstrong num");
+        }
+    </script>
+</body>
+</html>

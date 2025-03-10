@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [1,2,3,4,4]
+         
+        function myMap(arr,callBack) {
+            let ans = []
+            for (val of arr) {
+                ans.push(callBack(val))
+            }
+
+            return ans;
+        }
+
+        let arr = myMap(arr, (val) => {
+            return val*val
+        })
+
+        console.log(arr);
+    </script>
+</body>
+</html>

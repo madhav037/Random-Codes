@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:input="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="password" name="" id="password">
+    <input type="button" value="show password" id="show" onclick="show()">
+    <script>
+        let i = 0;
+        function show() {
+            if (i % 2 == 0) {
+                document.getElementById('password').type = 'text'
+                i++;
+            }else {
+                document.getElementById('password').type = 'password'
+                i++;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validation</title>
+</head>
+<body>
+    <input type="text" id="box" value=""> USERNAME
+    <input type="text" id="password" value=""> PASSWORD
+    <input type="text" id="re-password" value=""> repeat PASSWORD
+    <input type="date" id="age" value=""> DOB
+    <input type="text" id="endrollment-number" value=""> endrollment no 
+    <input type="text" id="email" value=""> email 
+
+    <input type="button" id="button" value="check" onclick="check()">
+    <script>
+        function check() {
+            console.log(age.value)
+            box = document.getElementById('box').value
+            age = document.getElementById('age').value
+            password = document.getElementById('password').value
+            rePassword = document.getElementById('re-password').value
+            endrollment_number = document.getElementById('endrollment-number').value
+            email = document.getElementById('email').value
+            //  = document.getElementById('button')
+
+            if (box.length < 8) {
+                alert('invalid username length')
+            }
+            if (password.length >= 8 && password.length <= 12) {
+                let pattern1 = '[0-9][!@#$%^&*()_+-=`~<>,.?/:;"\'{}[]|.]'
+                let pattern2 = ''
+                let a = new RegExp(pattern1)
+                let b = new RegExp(pattern2)
+                if(a.test(box)) {
+                    if(password != rePassword) {
+                        alert('passwords do not match')
+                    }        
+                }
+                else {
+                    alert('should have atleast 1 number and 1 special symbol')
+                }
+
+            }else {
+                alert('invalid password length')
+            }
+            
+            console.log(new Date().getFullYear() - new Date(age).getFullYear())    
+            if ((new Date().getFullYear() - new Date(age).getFullYear()) < 18) {
+                alert('not 18')                
+            }
+
+            if (endrollment_number.length == 11) {
+                let pattern = '^22010101[0-9]{3}$'
+                let aa = RegExp(pattern)
+                if(aa.test(endrollment_number)) {
+                    // nothing
+                }else {
+                    alert('invaild end no')
+                }
+            }else {
+                alert('invalid length end no')
+            }
+
+            let pattern3 = '^[0-9a-z] + @ [0-9a-zA-z] + \. [0-9a-zA-z]$'
+            let aaa = new RegExp(pattern3)
+            if (aaa.test(pattern3)) {
+                // good
+            }else {
+                alert('email valid nathi')
+            }            
+        }
+    </script>
+</body>
+</html>

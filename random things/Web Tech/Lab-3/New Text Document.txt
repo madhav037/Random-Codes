@@ -1,0 +1,11 @@
+write an html file with js that finds position of 1st occurance of vowel 'a', last occurance of vowel 'a' in a given word and return the string bet them
+
+demonstra use of array to find max num 
+
+write js that uses a loop that searches a word in sentence held with array returning the index of the word
+
+wap to display faculties stored in array
+
+wap to display stored stored in array
+
+demonstrate different array func like push pop shift unshift sort splice
